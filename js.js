@@ -126,3 +126,64 @@
     // }
 
     // display( [1, 5, 8, 3, 2], 0, 1, 2, 3);
+
+    // Viết chương trình in ra ngẫu nhiên mã màu thập lục phân
+
+    // function color() {
+    //     var string = "#"
+    //     for( let i = 1; i <= 6; i++) {
+    //         var result = Math.floor(Math.random() * 16)
+    //         if( result === 10 ){
+    //             string += "a"
+    //         } else if( result === 11 ){
+    //             string += "b"
+    //         } else if( result === 12 ){
+    //             string += "c"
+    //         } else if( result === 13){
+    //             string += "d"
+    //         } else if( result === 14 ){
+    //             string += "e"
+    //         } else if( result === 15 ){
+    //             string += "f"
+    //         } else {
+    //             string += result.toString();
+    //         }
+    //     }
+       
+    //     console.log( string )
+    // }
+
+    // color()
+
+    // Viết chương trình xóa các kí tự trong bảng mã ascii không được in trong một chuỗi
+
+    // function deleteString( string ) {
+    //     var length = string.length;
+    //         var resultString = '';
+    //     for( let i = 0; i < length; i++) {
+    //         var result = string.charCodeAt( i );
+    //         if ( result >= 65 && result <=90 || result >= 97  && result <= 122  || result >= 48 && result <= 57) {
+    //             resultString += string[i];
+    //         }
+    //     }
+    //     console.log( resultString )
+    // }
+    // deleteString( 'äÄçÇéÉêw3resouröceÖÐþúÚ' );
+
+    // Viết chương trình thay đổi nhiều khóa của đối tượng bằng cách chỉ định khóa cho đối tượng đó 
+
+    function check( object ) {
+        var object2 = {
+            name: 'thuc',
+            age: 21,
+            class: "k11TT"
+        };
+        
+        for ( let index in object2 ) {
+                index = object.name
+        }
+        
+        console.log ( object2)
+    }
+
+    check ({ name: 'firstName', age: 'Actor' })
