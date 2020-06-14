@@ -172,34 +172,114 @@
 
     // Viết chương trình thay đổi nhiều khóa của đối tượng bằng cách chỉ định khóa cho đối tượng đó 
 
-    function check( object ) {
-        var object2 = {
-            name: 'thuc',
-            age: 21,
-            class: "k11TT"
-        };
-        var array = [];
-        var result = Object.keys( object2 );
-        var value = Object.values( object2 );
-        var objectEmpty = '';
-        for ( let i = 0; i < result.length; i++ ) {
-            for( let index in object ) {
-                if ( result[i] === index ) {
-                    result[i] = object[index];
-                    console.log( result[i] );
-                }
-            }
-        }
-         
-        console.log( value );
-        console.log( result  );
+    // function check( object ) {
+    //     var object2 = {
+    //         name: 'thuc',
+    //         age: 21,
+    //         class: "k11TT"
+    //     };
+    //     var array = [];
+    //     var result = Object.keys( object2 );
+    //     var value = Object.values( object2 );
+    //     var objectEmpty = '';
+    //     for ( let i = 0; i < result.length; i++ ) {
+    //         for( let index in object ) {
+    //             if ( result[i] === index ) {
+    //                 result[i] = object[index];
+    //                 console.log( result[i] );
+    //             }
+    //         }
+    //     }
+    //     for( let i = 0; i < result.length; i++ ) { 
+    //          array.push(  result[ i ] + ": "+ value[ i ] );
+    //     }
+    //     var result = "{" + array.join(",") + "}";
+    //     console.log( result );
+    // }
+    // check ({ name: 'firstName', age: 'trinhhongthuc' })
 
+    // Viết chương trình trả về true Nếu hàm vị ngữ được cung cấp giá trị trả về 
 
-        for( let i = 0; i < result.length; i++ ) { 
-             array.push(  result[ i ] + ": "+ value[ i ] );
-        }
-        var result = "{" + array.join(",") + "}";
-        console.log( result );
+    // function check( array, x) {
+    //    var result  = array.every( x);
+    //     console.log( result );
+    // }
+
+    // check( [1, 2, 3, 5], x => x > 0) 
+
+    // Viết chương trình chia một mảng thành hai nhóm , nếu là true thì sẽ ở một nhóm ngược lại thì ở nhóm khác
+
+    // function check( array1, array2 ) {
+    //     const length = array1.length;
+    //     var   arrayEmpty1 = [];
+    //     var arrayEmpty2 = [];
+    //     var arrayEmpty3 = [];
+    //     for( let i = 0 ; i < length; i++ ) {
+    //         if(array2[ i ]) {
+    //             arrayEmpty1.push( array1[ i ] );
+    //         } else {
+    //             arrayEmpty2.push( array1[ i ] );
+    //         }
+    //     }
+    //     arrayEmpty3.push ( arrayEmpty1, arrayEmpty2 );
+    //     console.log( arrayEmpty3 );
+    // }
+    // check( [1, 2, 3, 4], [ true, true, true, true]);
+
+    // Viết chương trình xóa phần tử ở bên trái mảng do ta chỉ định
+
+    // function deleteElement ( array, number ) {
+    //     if( number === undefined ) {
+    //         number = 1;
+    //     }
+
+    //     var length = array.length;
+    //     for (let i = 1; i <= number; i++) {
+    //         array.splice( 0, number);
+    //         console.log( array );
+    //         return true;
+    //     }
+    // }   
+
+    // deleteElement( [1, 2, 3, 4, 5], 6)
+
+    // Viết chương trình xóa phần tử bên phải của mảng đã cho 
+
+    // function check( array, number ) {
+    //     if( number === undefined) {
+    //         number = -1;
+    //     }
+    //     for( ; ;) {
+    //         array.splice( number);
+    //         console.log( array );
+    //         return true;
+    //     }
+    // }
+    // check( [1, 2, 3, 4, 5], -3)
+
+    // Viết chương trình mở rộng mã màu từ 3 thành 6
+
+    function widthToColor( string ) {
+        var array = string.split("");
+        var length = array.length;
+        var result = array.map( course => course + course);
+        var resultString = result.join("").split("");
+        resultString.splice(0, 1);
+        console.log( resultString.join(""));
     }
 
-    check ({ name: 'firstName', age: 'trinhhongthuc' })
+    widthToColor( "#7f9");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
