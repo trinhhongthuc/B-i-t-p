@@ -178,12 +178,28 @@
             age: 21,
             class: "k11TT"
         };
-        
-        for ( let index in object2 ) {
-                index = object.name
+        var array = [];
+        var result = Object.keys( object2 );
+        var value = Object.values( object2 );
+        var objectEmpty = '';
+        for ( let i = 0; i < result.length; i++ ) {
+            for( let index in object ) {
+                if ( result[i] === index ) {
+                    result[i] = object[index];
+                    console.log( result[i] );
+                }
+            }
         }
-        
-        console.log ( object2)
+         
+        console.log( value );
+        console.log( result  );
+
+
+        for( let i = 0; i < result.length; i++ ) { 
+             array.push(  result[ i ] + ": "+ value[ i ] );
+        }
+        var result = "{" + array.join(",") + "}";
+        console.log( result );
     }
 
-    check ({ name: 'firstName', age: 'Actor' })
+    check ({ name: 'firstName', age: 'trinhhongthuc' })
