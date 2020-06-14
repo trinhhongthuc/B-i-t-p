@@ -259,16 +259,86 @@
 
     // Viết chương trình mở rộng mã màu từ 3 thành 6
 
-    function widthToColor( string ) {
-        var array = string.split("");
-        var length = array.length;
-        var result = array.map( course => course + course);
-        var resultString = result.join("").split("");
-        resultString.splice(0, 1);
-        console.log( resultString.join(""));
-    }
+    // function widthToColor( string ) {
+    //     var array = string.split("");
+    //     var length = array.length;
+    //     var result = array.map( course => course + course);
+    //     var resultString = result.join("").split("");
+    //     resultString.splice(0, 1);
+    //     console.log( resultString.join(""));
+    // }
 
-    widthToColor( "#7f9");
+    // widthToColor( "#7f9");
+
+    // Viết chương trình lấy mọi phần tử thứ n trong mảng cho trước
+
+    // function addElement( array, number ) {
+    //     var length = array.length;
+    //     var arrayEmpty = [];
+    //     for ( let i = number - 1; i < length; i += number) {
+    //         arrayEmpty.push( array[i] ); 
+    //     }
+    //     console.log ( arrayEmpty )
+    // } 
+    // addElement( [1, 2, 3, 4, 5, 6, 7, 8], 4);
+
+    // Viết chương trình lọc các giá trị không duy nhất trong một mảng
+
+    // function filterElement( array ) {
+    //    var length = array.length;
+    //    for ( let i = 0; i < length; i++) {
+    //        for ( let j = i + 1; j < length; j++ ) {
+    //            if( array[ i ] === array[ j ] ) {
+    //                var result = array[i];
+    //                array.splice( j, 1 );
+    //                length--;
+    //                j--;
+    //            }
+    //        }
+    //        if( array[ i ] === result ) {
+    //            array.splice( i, 1 );
+    //            length--;
+    //            i--;
+    //        }
+    //    }
+    //    console.log( array)
+    // }
+    // filterElement( [ 1, 1, 5, 6, 7, 7] ); 
+    
+    // Viết chương trình lọc các giá trị trong một mảng dựa trên hàm được cung cấp ;
+
+    // function check(  x ) {
+    //     var array = [
+    //         { id: 0, value: 'a' },
+    //         { id: 1, value: 'b' },
+    //         { id: 2, value: 'c' },
+    //         { id: 1, value: 'd' },
+    //         { id: 0, value: 'e' }   
+    //     ];  
+    //     // console.log( array[0] )
+    //     // var length = array.length;
+    //     // for( let i = 0; i < length - 1; i++) {
+    //     //     for( let j =  i + 1; j < length; j ++) {
+    //     //         if( array[i].id === array[j].id ) {
+    //     //             var result = array[i].id;
+    //     //             array.splice( j, 1);
+    //     //             length--;
+    //     //             j--;
+    //     //         }
+    //     //     }
+    //     //     if( array[i].id === result  ) {
+    //     //         array.splice( i, 1);
+    //     //         length--;
+    //     //         i--;
+    //     //     } 
+    //     // }
+    //     // console.log( array);
+    //     var resultArray = array.filter( course => course)
+    //     console.log( resultArray)
+    // }
+    // check( (a, b) =>  a.id === b.id)
+
+
 
 
 
