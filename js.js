@@ -386,23 +386,61 @@
 
     // 30 Viết chương trình lọc phần tử nhất định của mảng
 
-    var findElement = (array, ...number ) => {
-        let result = array.filter ( (values) => {    
-           return  number.includes(values) === false;
-        });
-        return result;
+//     var findElement = (array, ...number ) => {
+//         let result = array.filter ( (values) => {    
+//            return  number.includes(values) === false;
+//         });
+//         return result;
+//     }
+
+//    console.log(  findElement( [1, 2, 3, 4], 4) ) 
+
+    // Viết chương trình trả về mảng ngoại trừ phần tử đầu tiên nếu mảng có một giá trị thì trả về toàn bộ mảng 
+
+    // var create = (array) => {
+    //     // c1
+    //     // if(array.length === 1) {
+    //     //     return array;
+    //     // } else {
+    //     //     array.shift();
+    //     //     return array;
+    //     // }
+
+    //     // c2
+    //     return array.length > 1 ? array.splice() : array
+    // }
+
+    // console.log( create( [1, 2, 3, 4, 5] ) );
+
+    //  32 Viết chương trình tính tổng mảng nhất định khi truyền vào một hàm điều kiện
+
+    // var result = ( array, compare ) => {
+    //     array.map( typeof compare === 'function' ? compare : value => value[compare])
+    //     return array.reduce( (total, value) => total + value.n, 0);
+    // };
+    // console.log( result([{ n: -4 }, { n: -2 }, { n: 8 }, { n: 6 }], 'n') );
+
+
+    // var result = ( array, compare ) => {
+
+    //     if ( typeof compare === 'function') {
+    //         return array.reduce( compare);
+    //     } else {
+    //         return array.reduce( (total, value) => total + value, 0);
+    //     }
+       
+    // };
+    // console.log( result( [1, 2, 3, 4, 3 , 5, 7], (s,v) => s + v) );
+
+
+
+    // Viết chương trình hiển thị ra một số ngẫu nhiên do ta chỉ định 
+
+    var number = ( number1, number2 ) => {
+        return Math.floor( Math.random() * (number2 - number1) + 1) + number1;
     }
 
-   console.log(  findElement( [1, 2, 3, 4], 4) )
-
-
-
-
-
-
-
-
-
+    console.log( number ( -5, 5) )
 
 
 
