@@ -338,7 +338,62 @@
     // }
     // check( (a, b) =>  a.id === b.id)
 
+    // viết chương trình chuyển đổi chữ cái đầu tiên trong chuổi
 
+
+    // function create ( string ) {
+    //     var array = [];
+    //     var toArray = string.split("");
+    //     var length = toArray.length;
+    //     var result = string.charCodeAt( toArray[0]);
+    //     if ( result >= 65 && result <= 90 ) {
+    //         var toStringLow = toArray[0].toLowerCase();
+    //         array.push( toStringLow );
+    //     } else if ( result >= 97 && result <= 122 ) {
+    //         var toStringUp = toArray[0].toUpperCase();
+    //         array.push( toStringUp );
+    //     } 
+
+    //     for( let i = 1; i < length; i ++  ) {
+    //          array.push ( toArray[i] );
+    //     }
+    //     console.log( array.join("") );
+    // }
+
+    // create ( "trinhhongthuc" );
+
+    // 25 Viết chương trình tạo ra một mảng mới từ hia mảng đã cho trước
+
+    // var create = (a, b) => a.reduce( ( acc, x) => acc.concat( b.map( y => [x, y]  )), []);
+    // console.log( create([1, 2], [3, 4]) );
+
+    // 26 Viết chương trình trả về true nếu chuổi là y|yes và false nếu chuổi là n|no 
+
+    // var check = (string) => {
+    //     if( string === "y" || string === "yes") {
+    //         return true
+    //     }else if( string === "n" || string === "no" ) {
+    //         return false;
+    //     }
+    // }
+    // console.log( check("no") );
+
+    // var check = (string) => {
+    //   return result =  string === "y" || string === "yes" ? true: 
+    //     string === "no" || string === "n" ? false : false
+    // }
+    // console.log( check("yes") );
+
+    // 30 Viết chương trình lọc phần tử nhất định của mảng
+
+    var findElement = (array, ...number ) => {
+        let result = array.filter ( (values) => {    
+           return  number.includes(values) === false;
+        });
+        return result;
+    }
+
+   console.log(  findElement( [1, 2, 3, 4], 4) )
 
 
 
