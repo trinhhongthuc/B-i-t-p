@@ -493,7 +493,6 @@
                   resultString = stringAdd.concat( resultString);
             }
             return resultString;
-            
         } else {
             return stringName;
         }
