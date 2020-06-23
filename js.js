@@ -436,13 +436,66 @@
 
     // Viết chương trình hiển thị ra một số ngẫu nhiên do ta chỉ định 
 
-    var number = ( number1, number2 ) => {
-        return Math.floor( Math.random() * (number2 - number1) + 1) + number1;
+    // var number = ( number1, number2 ) => {
+    //     return Math.floor( Math.random() * (number2 - number1) + 1) + number1;
+    // }
+
+    // console.log( number ( -5, 5) )
+
+
+    // Viết chương trình lấy số ngấu nhiên trong phạm vi chỉ định
+
+    // var check = ( number1, number2 ) => {
+    //     return Math.floor( ( Math.random() * (number2 - number1) + 1)) + number1;
+    // }
+    // console.log( check( 1, 5));
+
+    // Viết chương trình nhận n số nguyên ngẫu nhiên trong phạm vi chỉ định
+
+    // var addNumber = ( min, max, number = 1 ) => {
+    //     let arrayEmpty = [];
+    //     // for( let i = 1; i <= number; i++ ) {
+    //     //     let result = Math.floor( Math.random() * (max- min) + 1) + min;
+    //     //     arrayEmpty.push( result );
+    //     // }
+    //     // return arrayEmpty;
+    //     var n = 1;
+    //     while( n <= number ) {
+    //         let result = Math.floor( Math.random() * (max- min) + 1) + min;
+    //         arrayEmpty.push( result );
+    //         n++;
+    //     }
+    //     return arrayEmpty;
+    // }
+
+    // console.log( addNumber( -10, 20, 5) );
+
+    // Viết một hàm nhận và một mảng giá trị và trả về giá trị lớn nhất và nhỏ nhất của mảng đó 
+
+    // var create = ( ...element ) => {
+    //     var create2 =  ( ...agurments ) => {
+    //             agurments.push (Math.max.apply( Math, element));
+    //             agurments.push (Math.min.apply( Math, element));
+    //             return agurments;
+    //     }
+    //     return create2();
+    // }   
+    // console.log( create( -1, 2, 3, 4, 5 ) );
+
+    // Viết chương trình để đệm một chuổi hai bên kuys tự được chỉ định Nếu nó ngắn hơn đọ dài chỉ định
+
+    var string = (stringName, length, stringAdd = "a" ) => {
+        var resultString = stringName;
+        if ( stringName.length < length ) {
+            var resultLength =  length - stringName.length;
+            for ( let i = 0; i < Math.floor( resultLength / 2); i ++ ) {
+                 resultString = resultString.concat( stringAdd );
+                  resultString = stringAdd.concat( resultString);
+            }
+            return resultString;
+            
+        } else {
+            return stringName;
+        }
     }
-
-    console.log( number ( -5, 5) )
-
-
-
-
-
+    console.log( string( "thu2c", 10))
