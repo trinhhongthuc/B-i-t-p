@@ -484,17 +484,91 @@
 
     // Viết chương trình để đệm một chuổi hai bên kuys tự được chỉ định Nếu nó ngắn hơn đọ dài chỉ định
 
-    var string = (stringName, length, stringAdd = "a" ) => {
-        var resultString = stringName;
-        if ( stringName.length < length ) {
-            var resultLength =  length - stringName.length;
-            for ( let i = 0; i < Math.floor( resultLength / 2); i ++ ) {
-                 resultString = resultString.concat( stringAdd );
-                  resultString = stringAdd.concat( resultString);
-            }
-            return resultString;
+    // var string = (stringName, length, stringAdd = "a" ) => {
+    //     var resultString = stringName;
+    //     if ( stringName.length < length ) {
+    //         var resultLength =  length - stringName.length;
+    //         for ( let i = 0; i < Math.floor( resultLength / 2); i ++ ) {
+    //              resultString = resultString.concat( stringAdd );
+    //               resultString = stringAdd.concat( resultString);
+    //         }
+    //         return resultString;
+    //     } else {
+    //         return stringName;
+    //     }
+    // }
+    // console.log( string( "thu2c", 10))
+
+    // Viết chương trình loại bỏ key và value của một đối tượng cho trước 
+
+    // var removeObject = ( object, array ) => {
+    //       var result =   array.filter( item =>  {
+    //         for( let i in object ) {   
+    //          item === i ? delete object[i]: true
+    //         }
+    //       });
+    //      return object;
+    // }
+    // console.log( removeObject( { "a": 1, "b": 2, "c": 3}, [ "b","c"] ));
+    // 40 Viết chương trình tạo một mảng các cặp giá trị nhất định cho trước
+    // var createArray = (object) => {
+    //     var arrayEmpty = [];
+    //     for( let i in object ) {
+    //         var result = (...agurments) => {
+    //             agurments.push( object[i], i);
+    //             arrayEmpty.push(  agurments );
+    //             return arrayEmpty;
+    //         }
+    //         result();
+    //     }
+    //     return arrayEmpty;
+    // };
+    // console.log( createArray ( { "a": 1, "b":2 }));
+
+    // 41 Viết chương trình tạo đối tượng từ cặp key và value đã cho trước
+
+    // var createobject = (...array) =>  array.reduce( (acc, item) => ((acc[item[0]] = item[1]), acc) ,{});
+    // console.log( createobject (["a", 1], ["b",2]));
+
+    // Viết chương trình có được hàm kết hợp tùy chỉnh trả về đối số  đầu tiên trả về true từ hàm xác thực cung cấp 
+    // const check = ( ...array ) => {
+    //     let result = array.find( item => item );
+    //     return result;  
+    // }
+    // console.log( check( undefined, null, NaN, '', 'Waldo' ));
+
+    // 44 Viết chương trình xóa các giá trị falsey ra khỏi một mảng nhất định
+    // const deleteElement = (...array ) => {
+    //     var result = array.filter (value => value)
+    //     return result;
+    // }
+    // console.log( deleteElement( 0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34, null, undefined ));
+
+    // 45 Viết chương trình chia một mảng thành hai nhóm , nếu một phần tử trong bộ lọc là true thì chúng sẽ về một nhóm ngược lại thì chúng sẽ về một nhóm
+
+    const compareElement = ( array1, array2 ) => {
+        var arrayEmpty = [];
+        let arrayEmpty2 = [];
+        let arrayEmpty3 = [];
+        if( array1.length === array2.length ) {
+           var resultArray =  array1.reduce((total, value, index ) => {
+                if ( array2[index] === true) {
+                    arrayEmpty.push( value );
+                }  if (!array2[index]) {
+                    arrayEmpty2.push( value )
+                }  if (index === array2.length - 1 ) {
+                    arrayEmpty3.push( arrayEmpty, arrayEmpty2);
+                   return arrayEmpty3;
+                }
+                // array2 === true ?  arrayEmpty.push( value ) : 
+                // array2 === false ? arrayEmpty2.push( value ) :
+                // index === array2.length - 1 ? arrayEmpty3.push( arrayEmpty, arrayEmpty2) : false;
+            },[]);
+            return resultArray;
         } else {
-            return stringName;
+            return false;
         }
     }
-    console.log( string( "thu2c", 10))
+    console.log( compareElement( ['beep', 'boop', 'foo', 'bar',"thuc", "trinh", "hong"], [true, true, false, true, false, false, true] ));
+
+
