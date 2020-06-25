@@ -546,29 +546,100 @@
 
     // 45 Viết chương trình chia một mảng thành hai nhóm , nếu một phần tử trong bộ lọc là true thì chúng sẽ về một nhóm ngược lại thì chúng sẽ về một nhóm
 
-    const compareElement = ( array1, array2 ) => {
-        var arrayEmpty = [];
-        let arrayEmpty2 = [];
-        let arrayEmpty3 = [];
-        if( array1.length === array2.length ) {
-           var resultArray =  array1.reduce((total, value, index ) => {
-                if ( array2[index] === true) {
-                    arrayEmpty.push( value );
-                }  if (!array2[index]) {
-                    arrayEmpty2.push( value )
-                }  if (index === array2.length - 1 ) {
-                    arrayEmpty3.push( arrayEmpty, arrayEmpty2);
-                   return arrayEmpty3;
-                }
-                // array2 === true ?  arrayEmpty.push( value ) : 
-                // array2 === false ? arrayEmpty2.push( value ) :
-                // index === array2.length - 1 ? arrayEmpty3.push( arrayEmpty, arrayEmpty2) : false;
-            },[]);
-            return resultArray;
-        } else {
-            return false;
-        }
+    // const compareElement = ( array1, array2 ) => {
+    //     var arrayEmpty = [];
+    //     let arrayEmpty2 = [];
+    //     let arrayEmpty3 = [];
+    //     if( array1.length === array2.length ) {
+    //        var resultArray =  array1.reduce((total, value, index ) => {
+    //             if ( array2[index] === true) {
+    //                 arrayEmpty.push( value );
+    //             }  if (!array2[index]) {
+    //                 arrayEmpty2.push( value )
+    //             }  if (index === array2.length - 1 ) {
+    //                 arrayEmpty3.push( arrayEmpty, arrayEmpty2);
+    //                return arrayEmpty3;
+    //             }
+    //             // array2 === true ?  arrayEmpty.push( value ) : 
+    //             // array2 === false ? arrayEmpty2.push( value ) :
+    //             // index === array2.length - 1 ? arrayEmpty3.push( arrayEmpty, arrayEmpty2) : false;
+    //         },[]);
+    //         return resultArray;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    // console.log( compareElement( ['beep', 'boop', 'foo', 'bar',"thuc", "trinh", "hong"], [true, true, false, true, false, false, true] ));
+
+    // const curry = (fn, arity = fn.length, ...args) =>
+    //     arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
+    // console.log(curry(Math.pow)(2)(8));
+    // console.log(curry(Math.min, 3)(10)(50)(2));
+
+
+    // const create = function( )
+
+    //  46 Viết chương trình so sánh hai object có tương đồng hay không và trả về giá trị true false
+
+    // const check = ( a, b ) => {
+    //     let keys = Object.keys(a)
+    //     if ( a === b )  return true;
+    //     if ( a instanceof Date && b instanceof Date )   return a.getTime() === b.getTime;
+    //     if (!a || !b || (typeof a !== 'object' && typeof b !== 'object'))  return a === b;
+    //     if( a === null || a === undefined || b === null || b === undefined)  return false;
+    //     if ( a.prototype !== b.prototype )  return false;
+    //     if (keys.length !== Object.keys(b).length)  return false; 
+    //      return keys.every( k => check( a[k], b[k]));
+    // }
+
+    // console.log( check ({ a: [2, { e: 3 }], b: [4], c: 'foo' }, { a: [2, { e: 3 }], b: [4], c: 'foo' }));
+
+
+    // 50 Viết chương trình chuyển đổi một chuổi số nguyên thành chuổi có hậu tố, thêm sáng hoặc chiều dựa trên giá trị của nó
+
+
+    // const addString = ( number ) => number >= 0 && number <= 12 ?  number + " am" :
+    //                              number > 12 && number < 24 ? number + " pm" : "khong co dinh dang gio nay";
+                                    
+            
+    //     // if ( number >= 0 && number <= 12) {
+    //     //     return number + " am";
+    //     // } 
+    //     // if( number > 12 && number < 24) {
+    //     //     return number + " pm";
+    //     // }
+    
+
+    // console.log( addString(25));
+
+    // Viết chương trình nhóm các đối tượng đã cho thành một object dựa trên hàm đã cho 
+
+//     const group_By = (arr, fn) =>
+//     arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val, i) => {
+//       acc[val] = (acc[val] || []).concat(arr[i]);
+//       return acc;
+//     }, {});
+//   console.log(group_By([6.1, 4.2, 6.3], Math.sqrt));
+
+// Viết chương trình tạo mảng hai chiều có độ dài nhất định 
+
+    // const create = ( a, b, c ) => {
+    //     let arrayEmpty = [];
+    //     for( let i = 0; i < a; i++) {
+    //         let arrayEmpty2 = [];
+    //         for( let j = 0; j < b; j++) {
+    //             arrayEmpty2.push( c );
+    //         }
+    //         arrayEmpty.push( arrayEmpty2 );
+    //     }
+    //     return arrayEmpty;
+    // }
+    // console.log( create( 3, 3, 2) );
+
+
+    const create = (a, b, c) => {
+        //  Array.from({ length: a }).map( value => c );
+         console.log( Array.from({ length: a }).map( value => Array.from({ length: b }.map( value2 => c)) ) )
     }
-    console.log( compareElement( ['beep', 'boop', 'foo', 'bar',"thuc", "trinh", "hong"], [true, true, false, true, false, false, true] ));
 
-
+    console.log( create( 3, 3, 2) );
