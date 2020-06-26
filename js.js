@@ -621,9 +621,9 @@
 //     }, {});
 //   console.log(group_By([6.1, 4.2, 6.3], Math.sqrt));
 
-// Viết chương trình tạo mảng hai chiều có độ dài nhất định 
-
-    // const create = ( a, b, c ) => {
+//53 Viết chương trình tạo mảng hai chiều có độ dài nhất định 
+    // c1 
+    // const create1 = ( a, b, c ) => {
     //     let arrayEmpty = [];
     //     for( let i = 0; i < a; i++) {
     //         let arrayEmpty2 = [];
@@ -634,12 +634,82 @@
     //     }
     //     return arrayEmpty;
     // }
+    // console.log( create1( 3, 4, 5) );
+    // c2
+    // const create = (a, b, c) => { 
+    //     return Array.from({ length: a }).map( value =>  Array.from({ length: b}).map( item => c)    );
+    // }
     // console.log( create( 3, 3, 2) );
 
 
-    const create = (a, b, c) => {
-        //  Array.from({ length: a }).map( value => c );
-         console.log( Array.from({ length: a }).map( value => Array.from({ length: b }.map( value2 => c)) ) )
-    }
 
-    console.log( create( 3, 3, 2) );
+//  Viết chương trình khỏi tạo một mảng trong phạm vi được chỉ định trong đó bắt đầu và kết thúc được bao gồm với khác biệt chung của chúng
+    // c1
+    // const create = ( end, strart = 0, step = 1 ) => {
+    //     let arrayEmpty = [];
+    //     for ( let i = strart; i <= end; i += step ) {
+    //         arrayEmpty.push( i );
+    //     }
+
+    //     return arrayEmpty;
+    // }
+
+    // console.log( create( 6, 0, 2) )
+
+    // const create = ( end, start = 0, step = 1 ) => {
+    //    return Array.from({ length: Math.ceil( (end + 1 - start) / step )}).map( course => {
+    //         course = start;
+    //         start= start + step;
+    //         return course
+    //  });
+    // }
+    // console.log( create( 6, 0, 2 ) );
+
+
+    // 56 Viết chương trình kiểm tra các phần tử trong mảng có bằng nhau hay không
+    // c1
+    // const check = ( array ) => {
+    //     let resultElement = array[0];
+    //      for ( let index of array ) {
+    //          if( resultElement !== index ){
+    //              return false;
+    //          }
+    //      }
+    //      return true;
+    // }
+    // console.log( check( [ 1, 2, 3, 4] ));
+    // c2
+    // const check = ( array ) => {
+    //     let resultElement = array[0];
+    //     let result = array.every( course => {
+    //          return course === resultElement; 
+    //     })
+    //     return result;
+    // }
+    // console.log( check( [ 1, 2, 3, 4] ));
+
+
+    // 57 Viết chương trình tính tổng trung bình của một mảng sau đó ánh xạ từng phần tử giá trị bằng hàm được cung cấp
+
+    // const total = ( array , fn ) =>  array.map ( typeof fn === "function" ? fn: value => value[fn] ).reduce ( (sum, value) => sum + value, 0) / array.length
+    // console.log( total ( [{ a: 40 }, { a: 20 }, { a: 80 }, { a: 60 }], "a" ))
+
+    // 58 Viết chương trình để phân chia các giá trị thành hai nhóm theo hàm vị ngữ, xác định thành phần nào thuộc hàm nào trong bộ sưu tập đầu vào 
+
+    const check = ( array, string ) => {
+        let arrayEmpty = [];
+        let arrayEmpty2 = [];
+       var result = array.reduce(( course, item ) => item.indexOf( string ) !== -1 ?course = arrayEmpty.push( item ) : course = arrayEmpty2.push( item ),[]);
+        console.log( result  )
+    }
+    console.log( check( [ "boor", "bar", "foo"], "b"))
+
+
+
+
+
+
+
+
+
+
